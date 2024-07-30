@@ -24,30 +24,60 @@
             text-align: center;
         }
         h1 {
-            color: #0073e6;
+            color: #ee2f35;
         }
         p {
             font-size: 18px;
             margin: 15px 0;
         }
         .button {
-            background-color: #0073e6;
+            background-color: #ee2f35;
             color: white;
             padding: 10px 20px;
             text-decoration: none;
             border-radius: 5px;
             font-size: 16px;
         }
-        .button:hover {
-            background-color: #005bb5;
-        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Welcome to air-haifa.co.il</h1>
-        <p>Your new gateway to the skies!</p>
-        <a href="#" class="button">Book a Flight</a>
+        <p>We count visits, push the button to count!</p>
+        <a href="#" class="button" onclick="foo()">Visitors number: <span class="visitors-counter"/></a>
     </div>
+	<script>
+			function foo() {
+			x = document.querySelector('.visitors-counter');
+			x.innerText = Number(x.innerText) + 1;
+			}
+	        function getRandomVisitorNumber() {
+            // Get the current date
+            const currentDate = new Date();
+            
+            // Get the start date (e.g., the date when the site was launched)
+            const startDate = new Date('2024-07-01');
+            
+            // Calculate the number of days since the start date
+            const daysSinceStart = Math.floor((currentDate - startDate) / (60 * 24));
+			
+			return Math.floor(daysSinceStart / 60);
+            
+            // Generate a base number that increases each day
+            const baseNumber = daysSinceStart * 1000 * 60; // Change 100 to adjust the base increment
+			
+            // Add a random number to the base number to simulate random visitor counts
+            const randomIncrement = Math.floor(Math.random() * 1000); // Change 100 to adjust the randomness
+            
+            // Calculate the final visitor number
+            const visitorNumber = baseNumber + randomIncrement;
+            
+            return visitorNumber;
+        }
+
+        // Display the visitor number on the page
+        document.querySelector('.visitors-counter').innerText = getRandomVisitorNumber();
+
+	</script>
 </body>
 </html>
