@@ -1,1 +1,240 @@
-placeholder
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2575.7">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!doctype html&gt;</p>
+<p class="p1">&lt;html lang="he" dir="rtl"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta charset="utf-8" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;meta name="viewport" content="width=device-width,initial-scale=1" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;title&gt;לוח תורנויות&lt;/title&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>:root{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--bg:#0b1220; --card:#0f1a2e; --muted:#9fb2d0; --text:#e8f0ff;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--line:rgba(255,255,255,.10); --shadow: 0 12px 30px rgba(0,0,0,.35);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>--radius: 18px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>*{box-sizing:border-box}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>body{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin:0;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: var(--bg);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>header{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: sticky; top:0; z-index:20;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(11,18,32,.92);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.wrap{max-width:1200px;margin:0 auto;padding:16px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.top{display:flex;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>h1{margin:0;font-size:18px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.sub{margin:2px 0 0;color:var(--muted);font-size:12px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.controls{display:flex;gap:10px;align-items:center;flex:1;justify-content:flex-end;min-width:280px}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.search{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>display:flex;align-items:center;gap:10px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 14px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>min-width: 280px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width: min(520px, 100%);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.search input{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>width:100%; border:0; outline:none; background:transparent;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color:var(--text); font-size:14px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.pill{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size:12px; color: var(--muted);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 6px 10px; border: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: 999px; background: rgba(255,255,255,.04);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>white-space:nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>button{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border:0; border-radius: 14px; padding: 10px 12px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(255,255,255,.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--text); cursor:pointer;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>main .card{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>margin: 16px auto 22px; max-width: 1200px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(15,26,46,.72);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-radius: var(--radius);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>box-shadow: var(--shadow);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>overflow: hidden;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.status{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 14px 16px; display:flex; gap:10px; align-items:center;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>justify-content:space-between; border-bottom: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>color: var(--muted); font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dot{width:10px;height:10px;border-radius:50%;background: rgba(110,231,183,.95);}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.dot.err{background: rgba(255,107,107,.95);}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.tableWrap{overflow:auto; max-height: calc(100vh - 170px);}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>table{width:100%; border-collapse: separate; border-spacing: 0; min-width: 1100px;}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>thead th{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>position: sticky; top: 0; z-index: 5;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>background: rgba(11,18,32,.98);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid var(--line);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>font-size: 12px; text-align: right;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 12px 12px; white-space: nowrap;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody td{</p>
+<p class="p1"><span class="Apple-converted-space">      </span>border-bottom: 1px solid rgba(255,255,255,.06);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>padding: 10px 12px; font-size: 13px;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>vertical-align: top; max-width: 360px; word-break: break-word;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody tr:nth-child(2n) td{background: rgba(255,255,255,.02);}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>mark{background: rgba(122,167,255,.28); color: var(--text); padding: 0 2px; border-radius: 4px;}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>.empty{padding: 18px 16px; color: var(--muted); font-size: 14px;}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/style&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body&gt;</p>
+<p class="p1">&lt;header&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="top"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1&gt;לוח תורנויות&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="sub"&gt;מסך אחד • חיפוש שמי • מקור הנתונים: Google Sheets&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div class="controls"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="search"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>🔎 &lt;input id="q" placeholder="חיפוש שם (מחפש בכל העמודות)…" autocomplete="off" /&gt;</p>
+<p class="p1"><span class="Apple-converted-space">          </span>&lt;span id="count" class="pill"&gt;0 שורות&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="refresh"&gt;רענון&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;button id="clear"&gt;נקה&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/header&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;main&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;div class="card"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="status"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="dot" class="dot"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;span id="statusText"&gt;טוען…&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;span class="pill"&gt;הטבלה משקפת את השיטס&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;div class="tableWrap"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;thead&gt;&lt;tr id="thead"&gt;&lt;/tr&gt;&lt;/thead&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;tbody id="tbody"&gt;&lt;/tbody&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;/table&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>&lt;div id="empty" class="empty" style="display:none;"&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>&lt;/div&gt;</p>
+<p class="p1">&lt;/main&gt;</p>
+<p class="p2"><br></p>
+<p class="p1">&lt;script&gt;</p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">  </span>// ✅ כאן מדביקים את ה-URL שמציג אצלך את ה-JSON</p>
+<p class="p1"><span class="Apple-converted-space">  </span>const API_URL = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjGwikOik_VH2-GyDA9HKinBukjIqgtDqeqXLpPTy0Y3q3svb8DyIRY8eYsD5_I_DpkzUFbOJlXAkvlxoUyN6o80T-KqNImRSA6mAiGYAMwVEoJsYvFahc3gPDkBaPbOKKQXZ_TXTS4i582cNnv6YwLOhWsWlmgu7Exhc8s2_TbokKX_pXK6f7HtXlpZ_nNSLIYm0n8H43mhC70qQOWIjgpsrWfnZVyPmx554wsXC-C2fGGjkGMqs0YeIpUTVLkLxuNsEFQzqONQzQ5mGVuIq_lc7Bj1A&amp;lib=Mi5x-mLCXtnSYjmz1Npf8CD--t4C_gfAW";</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>const els = {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>q: document.getElementById('q'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>refresh: document.getElementById('refresh'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>clear: document.getElementById('clear'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>thead: document.getElementById('thead'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>tbody: document.getElementById('tbody'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>statusText: document.getElementById('statusText'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>count: document.getElementById('count'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>dot: document.getElementById('dot'),</p>
+<p class="p1"><span class="Apple-converted-space">    </span>empty: document.getElementById('empty')</p>
+<p class="p1"><span class="Apple-converted-space">  </span>};</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let headers = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let rows = [];</p>
+<p class="p1"><span class="Apple-converted-space">  </span>let filtered = [];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function setStatus(ok, text) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>els.statusText.textContent = text;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>els.dot.className = ok ? "dot" : "dot err";</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function escapeHtml(s) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return String(s)</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.replaceAll('&amp;','&amp;amp;')</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.replaceAll('&lt;','&amp;lt;')</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.replaceAll('&gt;','&amp;gt;')</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.replaceAll('"','&amp;quot;')</p>
+<p class="p1"><span class="Apple-converted-space">      </span>.replaceAll("'","&amp;#039;");</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function highlight(text, query) {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const t = String(text ?? "");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!query) return escapeHtml(t);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const re = new RegExp(query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&amp;'), 'gi');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>return escapeHtml(t).replace(re, m =&gt; `&lt;mark&gt;${escapeHtml(m)}&lt;/mark&gt;`);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function render() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>els.thead.innerHTML = headers.map(h =&gt; `&lt;th&gt;${escapeHtml(h)}&lt;/th&gt;`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const q = els.q.value.trim();</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!filtered.length) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>els.tbody.innerHTML = "";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>els.empty.style.display = "block";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>els.empty.textContent = q ? `אין תוצאות עבור "${q}".` : "אין שורות להצגה.";</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} else {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>els.empty.style.display = "none";</p>
+<p class="p1"><span class="Apple-converted-space">      </span>els.tbody.innerHTML = filtered.map(obj =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const tds = headers.map(h =&gt; `&lt;td&gt;${highlight(obj[h], q)}&lt;/td&gt;`).join('');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>return `&lt;tr&gt;${tds}&lt;/tr&gt;`;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>}).join('');</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>els.count.textContent = `${filtered.length} שורות`;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>function applyFilter() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>const q = els.q.value.trim().toLowerCase();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>if (!q) { filtered = rows.slice(); render(); return; }</p>
+<p class="p2"><br></p>
+<p dir="rtl" class="p1"><span class="Apple-converted-space">    </span>// חיפוש בכל העמודות</p>
+<p class="p1"><span class="Apple-converted-space">    </span>filtered = rows.filter(obj =&gt;</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers.some(h =&gt; String(obj[h] ?? "").toLowerCase().includes(q))</p>
+<p class="p1"><span class="Apple-converted-space">    </span>);</p>
+<p class="p1"><span class="Apple-converted-space">    </span>render();</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>async function load() {</p>
+<p class="p1"><span class="Apple-converted-space">    </span>try {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setStatus(true, "טוען מהשיטס…");</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const res = await fetch(API_URL, { cache: "no-store" });</p>
+<p class="p1"><span class="Apple-converted-space">      </span>if (!res.ok) throw new Error("HTTP " + res.status);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>const data = await res.json();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>headers = data.headers || [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>rows = data.rows || [];</p>
+<p class="p1"><span class="Apple-converted-space">      </span>filtered = rows.slice();</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setStatus(true, `נטען בהצלחה (${rows.length} שורות)`);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>applyFilter();</p>
+<p class="p1"><span class="Apple-converted-space">    </span>} catch (e) {</p>
+<p class="p1"><span class="Apple-converted-space">      </span>console.error(e);</p>
+<p class="p1"><span class="Apple-converted-space">      </span>setStatus(false, "שגיאה בטעינה — בדוק שה-API_URL נכון ושיש גישה ל-Web App");</p>
+<p class="p1"><span class="Apple-converted-space">    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">  </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>let t = null;</p>
+<p class="p1"><span class="Apple-converted-space">  </span>els.q.addEventListener('input', () =&gt; { clearTimeout(t); t = setTimeout(applyFilter, 120); });</p>
+<p class="p1"><span class="Apple-converted-space">  </span>els.refresh.addEventListener('click', load);</p>
+<p class="p1"><span class="Apple-converted-space">  </span>els.clear.addEventListener('click', () =&gt; { els.q.value=""; applyFilter(); });</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">  </span>load();</p>
+<p class="p1">&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
